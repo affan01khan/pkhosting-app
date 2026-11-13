@@ -1,0 +1,4 @@
+[test]
+coveragePathIgnorePatterns = ["**/api/generated/**", "**/*.gen.ts", "**/src/test/**"]
+coverageSkipTestFiles = true
+coverageReporter = ["text", "lcov"]
