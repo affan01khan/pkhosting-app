@@ -1,0 +1,47 @@
+# syntax=docker/dockerfile:1.7-labs
+# Build: DOCKER_BUILDKIT=1 docker build -f deploy/docker/Dockerfile.web --build-arg APP_NAME="PK Hosting" -t pkhosting-web .
+
+FROM node:24-slim AS deps
+COPY --from=oven/bun:1.4.0 /usr/local/bin/bun /usr/local/bin/bun
+WORKDIR /app
+COPY --parents .mistral/repositories/*/capabilities .mistral/repositories/*/packages ./
+COPY --parents package.json bunfig.toml .npmr[c] patche[s] tools/uv.sh apps/web/package.json packages/ts/*/package.json ./
+RUN --mount=type=secret,id=registry_token \
+    --mount=type=cache,target=/root/.bun/install/cache \
+    bash -c '. tools/uv.sh && bun install' && \
+    mkdir -p apps/web/node_modules
+COPY . .
+
+FROM deps AS build
+WORKDIR /app
+ARG VITE_API_URL=""
+ARG APP_NAME=""
+ENV NODE_ENV=production \
+    VITE_API_URL=${VITE_API_URL}
+RUN bun x nx run web:build
+
+FROM node:24-slim AS runtime
+WORKDIR /app
+ENV NODE_ENV=production \
+    HOST=0.0.0.0 \
+    PORT=3001
+RUN groupadd -g 1000 app 2>/dev/null || true && \
+    useradd -u 1000 -g 1000 -m -s /usr/sbin/nologin app 2>/dev/null || true
+COPY --from=build --chown=1000:1000 /app/apps/web/.output ./apps/web/.output
+COPY --from=build --chown=1000:1000 /app/node_modules ./node_modules
+COPY --from=build --chown=1000:1000 /app/apps/web/node_modules ./apps/web/node_modules
+COPY --from=build --chown=1000:1000 /app/packages ./packages
+EXPOSE 3001
+USER 1000:1000
+WORKDIR /app/apps/web
+HEALTHCHECK --interval=10s --timeout=5s --retries=5 --start-period=15s \
+    CMD node -e "fetch('http://127.0.0.1:3001/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+CMD ["node", ".output/server/index.mjs"]
+
+FROM deps AS dev
+ENV NODE_ENV=development \
+    HOST=0.0.0.0 \
+    PORT=3001
+WORKDIR /app/apps/web
+EXPOSE 3001
+CMD ["sh", "-c", "exec bun x vite dev --host 0.0.0.0 --port 3001"]
