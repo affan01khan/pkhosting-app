@@ -1,0 +1,7 @@
+[install]
+registry = "https://registry.npmjs.org"
+linker = "hoisted"
+minimumReleaseAgeExcludes = []
+
+[install.scopes]
+"@mistralai-capabilities" = "https://registry.npmjs.org/"
