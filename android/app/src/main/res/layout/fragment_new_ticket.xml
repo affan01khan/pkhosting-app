@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/space_lg">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dropdownCategory"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_ticket_category"
+            app:boxCornerRadiusBottomEnd="@dimen/button_radius"
+            app:boxCornerRadiusBottomStart="@dimen/button_radius"
+            app:boxCornerRadiusTopEnd="@dimen/button_radius"
+            app:boxCornerRadiusTopStart="@dimen/button_radius">
+
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:hint="@string/hint_subject"
+            app:boxCornerRadiusBottomEnd="@dimen/button_radius"
+            app:boxCornerRadiusBottomStart="@dimen/button_radius"
+            app:boxCornerRadiusTopEnd="@dimen/button_radius"
+            app:boxCornerRadiusTopStart="@dimen/button_radius">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editSubject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_lg"
+            android:hint="@string/hint_message"
+            app:boxCornerRadiusBottomEnd="@dimen/button_radius"
+            app:boxCornerRadiusBottomStart="@dimen/button_radius"
+            app:boxCornerRadiusTopEnd="@dimen/button_radius"
+            app:boxCornerRadiusTopStart="@dimen/button_radius">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minLines="5" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitTicket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_xl"
+            android:text="@string/action_submit_ticket"
+            app:cornerRadius="@dimen/button_radius" />
+
+        <ProgressBar
+            android:id="@+id/progressTicket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/space_lg"
+            android:indeterminateTint="@color/primary"
+            android:visibility="gone" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

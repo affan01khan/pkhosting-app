@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/comparison_title"
+        app:titleTextColor="@color/dark" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_lg"
+            android:stretchColumns="0">
+
+            <!-- Header row -->
+            <TableRow>
+                <TextView
+                    android:padding="8dp"
+                    android:text="@string/comparison_feature"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:padding="8dp"
+                    android:text="@string/plan_personal_short"
+                    android:textColor="@color/dark"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:padding="8dp"
+                    android:text="@string/plan_business_short"
+                    android:textColor="@color/primary"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:padding="8dp"
+                    android:text="@string/plan_professional_short"
+                    android:textColor="@color/dark"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </TableRow>
+
+            <TableRow android:background="@color/primary_light">
+                <TextView android:padding="8dp" android:text="@string/comparison_price" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/price_personal" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/price_business" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/price_professional" android:textColor="@color/dark" android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView android:padding="8dp" android:text="@string/comparison_websites" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_1" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_5" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_10" android:textColor="@color/text_secondary" android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow android:background="@color/primary_light">
+                <TextView android:padding="8dp" android:text="@string/comparison_storage" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_5gb" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_25gb" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_50gb" android:textColor="@color/text_secondary" android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView android:padding="8dp" android:text="@string/comparison_bandwidth" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_fair_use" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_fair_use" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_fair_use" android:textColor="@color/text_secondary" android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow android:background="@color/primary_light">
+                <TextView android:padding="8dp" android:text="@string/comparison_emails" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_5" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_25" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_50" android:textColor="@color/text_secondary" android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView android:padding="8dp" android:text="@string/comparison_ssl" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_yes" android:textColor="@color/primary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_yes" android:textColor="@color/primary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_yes" android:textColor="@color/primary" android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow android:background="@color/primary_light">
+                <TextView android:padding="8dp" android:text="@string/comparison_backups" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_backup_1" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_backup_3" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_backup_5" android:textColor="@color/text_secondary" android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView android:padding="8dp" android:text="@string/comparison_dns" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_no" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_yes" android:textColor="@color/primary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_yes" android:textColor="@color/primary" android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow android:background="@color/primary_light">
+                <TextView android:padding="8dp" android:text="@string/comparison_support" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_no" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_no" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_yes" android:textColor="@color/primary" android:textSize="13sp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView android:padding="8dp" android:text="@string/comparison_free_com" android:textColor="@color/dark" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_yes" android:textColor="@color/primary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_yes" android:textColor="@color/primary" android:textSize="13sp" />
+                <TextView android:padding="8dp" android:text="@string/val_yes" android:textColor="@color/primary" android:textSize="13sp" />
+            </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/space_lg"
+        app:cardBackgroundColor="@color/primary_light"
+        app:cardCornerRadius="@dimen/card_radius"
+        app:cardElevation="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/space_lg"
+            android:text="@string/comparison_note"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App -->
+    <string name="app_name">PKHosting</string>
+    <string name="app_tagline">Fast, reliable web hosting in Pakistan</string>
+    <string name="guest_user">Guest</string>
+    <string name="zero">0</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_plans">Plans</string>
+    <string name="nav_domains">Domains</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_support">Support</string>
+
+    <!-- Drawer -->
+    <string name="nav_profile">Profile</string>
+    <string name="nav_orders">Orders</string>
+    <string name="nav_invoices">Invoices</string>
+    <string name="nav_faqs">FAQs</string>
+    <string name="nav_contact">Contact</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_logout">Logout</string>
+
+    <!-- Home -->
+    <string name="hero_title">Hosting built for Pakistan</string>
+    <string name="hero_subtitle">Blazing fast SSD hosting, free SSL and local support — starting at Rs 4,490/year.</string>
+    <string name="promo_badge">PK&#8217;s trusted host since 2010</string>
+    <string name="featured_plans_title">Featured plans</string>
+    <string name="empty_featured_message">No featured plans to show yet.</string>
+    <string name="quick_actions_title">Quick actions</string>
+    <string name="find_domain_title">Find your perfect domain</string>
+    <string name="hint_domain_name">yourname.pk</string>
+    <string name="action_search">Search</string>
+    <string name="action_register_domain">Register Domain</string>
+    <string name="action_transfer_domain">Transfer Domain</string>
+    <string name="action_my_invoices">My Invoices</string>
+    <string name="action_get_support">Get Support</string>
+    <string name="action_view_plans">View all hosting plans</string>
+
+    <!-- Plans -->
+    <string name="plans_title">Hosting Plans</string>
+    <string name="filter_all">All</string>
+    <string name="filter_shared">Shared</string>
+    <string name="filter_reseller">Reseller</string>
+    <string name="action_compare_plans">Compare plans</string>
+    <string name="action_order_now">Order Now</string>
+    <string name="plan_detail_title">Plan Details</string>
+    <string name="plan_features_title">What&#8217;s included</string>
+    <string name="plan_personal_short">Personal</string>
+    <string name="plan_business_short">Business</string>
+    <string name="plan_professional_short">Professional</string>
+    <string name="price_personal">Rs 4,490</string>
+    <string name="price_business">Rs 11,990</string>
+    <string name="price_professional">Rs 23,990</string>
+    <string name="renewal_price_note">Renews at %1$s / year</string>
+    <string name="renewal_price_short">Renews %1$s/yr</string>
+    <string name="specs_format">%1$d websites &#8226; %2$d GB SSD &#8226; %3$d emails</string>
+    <string name="specs_reseller">%1$d GB SSD reseller space</string>
+    <string name="plan_reseller_name">Reseller R2</string>
+    <string name="error_plan_not_found">Plan details could not be loaded.</string>
+
+    <!-- Comparison -->
+    <string name="comparison_title">Compare Plans</string>
+    <string name="comparison_feature">Feature</string>
+    <string name="comparison_price">Price / year</string>
+    <string name="comparison_websites">Websites</string>
+    <string name="comparison_storage">SSD storage</string>
+    <string name="comparison_bandwidth">Bandwidth</string>
+    <string name="comparison_emails">Email accounts</string>
+    <string name="comparison_ssl">Free SSL</string>
+    <string name="comparison_backups">Daily backups</string>
+    <string name="comparison_dns">DNS management</string>
+    <string name="comparison_free_com">Free .com domain</string>
+    <string name="comparison_support">Support</string>
+    <string name="comparison_note">Prices shown are first-year promotional prices in PKR. Renewal prices apply from the second year.</string>
+    <string name="val_1">1</string>
+    <string name="val_5">5</string>
+    <string name="val_10">10</string>
+    <string name="val_25">25</string>
+    <string name="val_25gb">25 GB</string>
+    <string name="val_50">50</string>
+    <string name="val_50gb">50 GB</string>
+    <string name="val_5gb">5 GB</string>
+    <string name="val_backup_1">1 day</string>
+    <string name="val_backup_3">3 days</string>
+    <string name="val_backup_5">5 days</string>
+    <string name="val_fair_use">Unmetered</string>
+    <string name="val_yes">Yes</string>
+    <string name="val_no">No</string>
+
+    <!-- Domains -->
+    <string name="domain_search_title">Domain Search</string>
+    <string name="domain_search_subtitle">Register a new domain or transfer one you already own.</string>
+    <string name="tab_search">Register</string>
+    <string name="tab_transfer">Transfer</string>
+    <string name="transfer_title">Domain Transfer</string>
+    <string name="transfer_subtitle">Bring your domain to PKHosting — transfer is free with 1-year renewal.</string>
+    <string name="hint_tld">.com</string>
+    <string name="hint_years">Years</string>
+    <string name="hint_full_domain">example.com</string>
+    <string name="hint_auth_code">Auth / EPP code</string>
+    <string name="action_check_availability">Check availability</string>
+    <string name="action_register_now">Register now</string>
+    <string name="action_transfer_now">Transfer now</string>
+    <string name="domain_price_preview">Total: %1$s</string>
+    <string name="domain_available">Congratulations, this domain is available!</string>
+    <string name="domain_taken">Sorry, this domain is already taken.</string>
+    <string name="domain_taken_message">Try one of these alternatives:</string>
+    <string name="domain_suggestions">Try: %1$s, %2$s or %3$s</string>
+    <string name="domain_expires">Expires on %1$s</string>
+    <string name="auto_renew_on">Auto-renew: On</string>
+    <string name="auto_renew_off">Auto-renew: Off</string>
+    <string name="order_details_domain">Domain registration (%1$d year/s)</string>
+    <string name="order_details_transfer">Domain transfer</string>
+    <string name="transfer_requested">Transfer request submitted. Our team will contact you shortly.</string>
+    <string name="error_domain_name">Enter a domain name first.</string>
+    <string name="error_full_domain">Enter a full domain, e.g. example.com</string>
+    <string name="error_auth_code">Enter the auth code from your current registrar.</string>
+    <string name="error_search_failed">Domain check failed: %1$s</string>
+    <string name="my_domains_title">My Domains</string>
+    <string name="empty_domains">You have no registered domains yet.</string>
+
+    <!-- Auth -->
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Log in to manage your hosting and domains.</string>
+    <string name="register_title">Create your account</string>
+    <string name="forgot_password_title">Reset password</string>
+    <string name="forgot_password_message">Enter your account email and we will send you a reset link.</string>
+    <string name="hint_email">Email address</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="hint_full_name">Full name</string>
+    <string name="hint_phone">Phone number</string>
+    <string name="action_login">Log In</string>
+    <string name="action_register">Create Account</string>
+    <string name="action_send_reset">Send Reset Link</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="go_to_register">New to PKHosting? Create an account</string>
+    <string name="go_to_login">Already have an account? Log in</string>
+    <string name="logging_in">Logging in&#8230;</string>
+    <string name="creating_account">Creating account&#8230;</string>
+    <string name="reset_email_sent">Reset email sent. Check your inbox.</string>
+    <string name="error_required">This field is required</string>
+    <string name="error_invalid_email">Enter a valid email address</string>
+    <string name="error_short_password">Password must be at least 6 characters</string>
+    <string name="error_password_mismatch">Passwords do not match</string>
+    <string name="error_invalid_phone">Enter a valid phone number</string>
+    <string name="error_login_failed">Login failed: %1$s</string>
+    <string name="error_register_failed">Registration failed: %1$s</string>
+    <string name="error_reset_failed">Could not send reset email: %1$s</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_greeting">Assalam-o-Alaikum, %1$s</string>
+    <string name="dashboard_greeting_generic">My Dashboard</string>
+    <string name="stat_active_services">Active services</string>
+    <string name="stat_domains">Domains</string>
+    <string name="stat_unpaid">Unpaid invoices</string>
+    <string name="active_services_title">Active services</string>
+    <string name="empty_services">No active services yet. Choose a plan to get started.</string>
+
+    <!-- Orders -->
+    <string name="orders_title">My Orders</string>
+    <string name="order_details_hosting">Hosting: %1$s</string>
+    <string name="empty_orders_title">No orders yet</string>
+    <string name="empty_orders_message">Orders you place will appear here.</string>
+    <string name="action_view_orders">View My Orders</string>
+    <string name="order_type_hosting">Hosting</string>
+    <string name="order_type_domain">Domain</string>
+    <string name="order_type_transfer">Transfer</string>
+
+    <!-- Invoices -->
+    <string name="invoices_title">My Invoices</string>
+    <string name="invoice_detail_title">Invoice</string>
+    <string name="invoice_paid_note">This invoice has been paid. Thank you!</string>
+    <string name="empty_invoices_title">No invoices yet</string>
+    <string name="empty_invoices_message">Invoices for your orders will appear here.</string>
+    <string name="error_invoice_not_found">Invoice could not be loaded.</string>
+
+    <!-- Payments -->
+    <string name="payment_title">Payment</string>
+    <string name="demo_mode_badge">DEMO MODE</string>
+    <string name="demo_mode_note">No real money is charged. Real gateways (JazzCash, Easypaisa, Stripe) plug in here later.</string>
+    <string name="payment_method_title">Select payment method</string>
+    <string name="payment_jazzcash">JazzCash</string>
+    <string name="payment_easypaisa">Easypaisa</string>
+    <string name="payment_bank">Bank Transfer</string>
+    <string name="payment_card">Credit / Debit Card</string>
+    <string name="hint_card_number">Card number</string>
+    <string name="hint_card_expiry">MM/YY</string>
+    <string name="hint_card_cvv">CVV</string>
+    <string name="action_pay_now">Pay Now</string>
+    <string name="processing_payment">Processing payment&#8230;</string>
+    <string name="payment_success_title">Payment successful</string>
+    <string name="payment_success_message">Demo transaction %1$s completed. Your order has been placed.</string>
+    <string name="error_select_method">Please select a payment method.</string>
+    <string name="error_card_number">Enter a valid 16-digit card number</string>
+    <string name="error_card_expiry">Enter expiry as MM/YY</string>
+    <string name="error_card_cvv">Enter a valid CVV</string>
+    <string name="error_order_failed">Order could not be saved: %1$s</string>
+
+    <!-- Support -->
+    <string name="support_title">Support</string>
+    <string name="support_my_tickets">My tickets</string>
+    <string name="support_my_tickets_sub">Track replies from our support team</string>
+    <string name="support_open_ticket">Open a new ticket</string>
+    <string name="support_open_ticket_sub">We usually reply within a few hours</string>
+    <string name="support_contact_title">Other ways to reach us</string>
+    <string name="support_call">Call us</string>
+    <string name="support_email">Email us</string>
+    <string name="support_live_chat">Start live chat</string>
+    <string name="live_chat_note">Live chat is available Monday to Friday, 9am&#8211;6pm PKT.</string>
+    <string name="tickets_title">My Tickets</string>
+    <string name="ticket_detail_title">Ticket</string>
+    <string name="ticket_replies_title">Replies</string>
+    <string name="empty_replies">No replies yet. Be the first to add one.</string>
+    <string name="empty_tickets_title">No tickets yet</string>
+    <string name="empty_tickets_message">Support tickets you open will appear here.</string>
+    <string name="action_new_ticket">New Ticket</string>
+    <string name="new_ticket_title">New Ticket</string>
+    <string name="hint_ticket_category">Category</string>
+    <string name="hint_subject">Subject</string>
+    <string name="hint_message">How can we help?</string>
+    <string name="hint_reply">Type your reply&#8230;</string>
+    <string name="action_submit_ticket">Submit Ticket</string>
+    <string name="action_send_reply">Send reply</string>
+    <string name="ticket_created">Ticket submitted. Our team will reply soon.</string>
+    <string name="ticket_category_hosting">Hosting</string>
+    <string name="ticket_category_billing">Billing</string>
+    <string name="ticket_category_domain">Domains</string>
+    <string name="ticket_category_other">Other</string>
+    <string name="error_message_short">Please write at least 10 characters</string>
+    <string name="error_ticket_failed">Ticket could not be created: %1$s</string>
+    <string name="error_reply_failed">Reply could not be sent: %1$s</string>
+
+    <!-- Contact -->
+    <string name="contact_title">Contact Us</string>
+    <string name="contact_call_title">Call us</string>
+    <string name="contact_call_sub">Mon&#8211;Fri, 9am&#8211;6pm PKT</string>
+    <string name="contact_email_title">Email us</string>
+    <string name="contact_email_sub">We reply within 24 hours</string>
+    <string name="contact_website_title">Visit our website</string>
+    <string name="contact_website_sub">www.pkhosting.com</string>
+    <string name="contact_send_email">Send email</string>
+
+    <!-- FAQs -->
+    <string name="faqs_title">FAQs</string>
+    <string name="hint_search_faq">Search the knowledgebase&#8230;</string>
+    <string name="filter_billing">Billing</string>
+    <string name="filter_support">Support</string>
+    <string name="filter_hosting">Hosting</string>
+    <string name="empty_faqs_title">No matching FAQs</string>
+    <string name="empty_faqs_message">Try a different search term or category.</string>
+    <string name="empty_filter_title">Nothing here yet</string>
+    <string name="empty_filter_message">No items match the selected filter.</string>
+    <string name="empty_search_title">No results</string>
+    <string name="empty_search_message">Try a different search term.</string>
+
+    <!-- Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_phone">Phone</string>
+    <string name="profile_member_since">Member since</string>
+    <string name="profile_no_phone">Not set</string>
+    <string name="action_edit_profile">Edit Profile</string>
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="action_save">Save Changes</string>
+    <string name="profile_updated">Profile updated</string>
+    <string name="error_update_failed">Could not update profile: %1$s</string>
+    <string name="empty_profile_title">Not logged in</string>
+    <string name="empty_profile_message">Log in to view and edit your profile.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_notifications">Enable notifications</string>
+    <string name="settings_notifications_sub">Get alerts about invoices and tickets (demo preference).</string>
+    <string name="settings_sample_data">Sample data</string>
+    <string name="settings_sample_data_sub">Load sample hosting plans, FAQs and taken domains into Firestore. Runs only when a collection is still empty.</string>
+    <string name="action_load_sample_data">Load sample data</string>
+    <string name="seed_done">Sample data loaded (%1$d writes).</string>
+    <string name="error_seed_failed">Seeding failed: %1$s</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="settings_contact">Support: %1$s &#8226; %2$s</string>
+
+    <!-- States / shared -->
+    <string name="empty_generic_title">Nothing here yet</string>
+    <string name="empty_generic_message">Items you create will appear here.</string>
+    <string name="error_generic_title">Something went wrong</string>
+    <string name="error_generic_message">Please check your connection and try again.</string>
+    <string name="error_load_failed">Could not load data: %1$s</string>
+    <string name="action_retry">Retry</string>
+    <string name="empty_plans_title">No plans found</string>
+    <string name="empty_plans_message">Hosting plans will appear here once sample data is loaded.</string>
+    <string name="logout_title">Log out</string>
+    <string name="logout_message">Are you sure you want to log out?</string>
+    <string name="action_logout">Log Out</string>
+</resources>
