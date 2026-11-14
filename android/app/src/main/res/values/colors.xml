@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PKHosting brand palette. Blue replaces the green used on the website. -->
+    <color name="primary">#0877D1</color>
+    <color name="primary_dark">#065FA6</color>
+    <color name="primary_light">#EAF4FC</color>
+    <color name="light_blue">#EAF4FC</color>
+    <color name="dark">#101820</color>
+    <color name="dark_soft">#1C2733</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_primary">#101820</color>
+    <color name="text_secondary">#5A6B7B</color>
+    <color name="divider">#E1EAF2</color>
+    <color name="demo_banner">#EAF4FC</color>
+    <color name="ic_launcher_background">#0877D1</color>
+</resources>

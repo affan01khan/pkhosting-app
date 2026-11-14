@@ -1,0 +1,78 @@
+rules_version = '2';
+
+// PKHosting - Firestore security rules.
+// Users may only read and write their own data. Plans, FAQs and the list of
+// taken domains are public catalog data (read-only for the app in production;
+// signed-in writes are allowed here so the in-app "Load sample data" seeder
+// works during the FYP demo).
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // User profiles: strictly owner-only.
+    match /users/{uid} {
+      allow read, update, create: if isOwner(uid);
+      allow delete: if false;
+    }
+
+    // Catalog data: public read; any signed-in user may seed samples (demo).
+    match /plans/{id} {
+      allow read: if true;
+      allow create, update: if isSignedIn();
+      allow delete: if false;
+    }
+
+    match /faqs/{id} {
+      allow read: if true;
+      allow create, update: if isSignedIn();
+      allow delete: if false;
+    }
+
+    // Public list of domain names that are already registered (for the
+    // availability check). Read-only for clients.
+    match /takenDomains/{id} {
+      allow read: if true;
+      allow create, update: if isSignedIn();
+      allow delete: if false;
+    }
+
+    // Customer-owned collections: a document must carry the owner's uid.
+    match /domains/{id} {
+      allow read, update: if isOwner(resource.data.userId);
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow delete: if false;
+    }
+
+    match /orders/{id} {
+      allow read, update: if isOwner(resource.data.userId);
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow delete: if false;
+    }
+
+    match /invoices/{id} {
+      allow read, update: if isOwner(resource.data.userId);
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow delete: if false;
+    }
+
+    match /tickets/{id} {
+      allow read, update: if isOwner(resource.data.userId);
+      allow create: if isSignedIn() && request.resource.data.userId == request.auth.uid;
+      allow delete: if false;
+
+      // Replies live in a sub-collection of their ticket.
+      match /replies/{replyId} {
+        allow read, create: if isSignedIn() &&
+          get(/databases/$(database)/documents/tickets/$(id)).data.userId == request.auth.uid;
+        allow update, delete: if false;
+      }
+    }
+  }
+}
